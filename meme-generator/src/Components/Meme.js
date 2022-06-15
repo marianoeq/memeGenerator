@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-export default function Meme() {
+export default function Meme({darkMode}) {
   const [allMemes, setAllMemes] = useState([]);
   const [meme, setMeme] = useState({
     topText: "",
@@ -36,7 +36,7 @@ export default function Meme() {
   }
 
   return (
-    <main>
+    <main className= {darkMode? "dark": ""}>
       <div className="form">
         <input
           type="text"
